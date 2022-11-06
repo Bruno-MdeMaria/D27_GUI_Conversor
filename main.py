@@ -6,7 +6,8 @@ window.minsize(width=500, height=300)  #tamanho minimo da tela
 
 #classe label do tkinter:  (etiquetasou rótulos):
 
-tkinter.Label()
+minha_label = tkinter.Label(text="Eu sou um rótulo", font=("Arial", 24, "bold"))
+minha_label.pack()   #faz aparecer o rótulo na janela
 
 
 
