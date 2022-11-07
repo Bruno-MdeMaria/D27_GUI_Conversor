@@ -10,6 +10,16 @@ minha_label = tkinter.Label(text="Eu sou um rótulo", font=("Arial", 24, "bold")
 minha_label.pack()   #faz aparecer o rótulo na janela
 
 
+#classe button:
+
+
+def button_clic():
+    print("você clicou")
+
+button = tkinter.Button(text="Clique aqui", command=button_clic)  #função command é do tkinter.. inicia a função criada acima
+button.pack()      #para embalar no ecrã
+
+
 
 
 
