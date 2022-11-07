@@ -14,12 +14,18 @@ minha_label.pack()   #faz aparecer o rótulo na janela
 
 
 def button_clic():
-    print("você clicou")
+    novo_texto = entrada.get()
+    minha_label.config(text= novo_texto)
 
 button = tkinter.Button(text="Clique aqui", command=button_clic)  #função command é do tkinter.. inicia a função criada acima
 button.pack()      #para embalar no ecrã
 
 
+#classe Entry:   (espécie de imput)
+
+entrada = tkinter.Entry(width=10)
+entrada.pack()
+print(entrada.get())
 
 
 
