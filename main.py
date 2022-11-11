@@ -1,5 +1,13 @@
 import tkinter
 
+#classe button:
+def button_clic():
+    print("aguardando clique")
+    novo_texto = entrada.get()
+    minha_label.config(text= novo_texto)
+
+
+
 window = tkinter.Tk()
 window.title("Test GUI Program")
 window.minsize(width=500, height=300)  #tamanho minimo da tela
@@ -7,25 +15,21 @@ window.minsize(width=500, height=300)  #tamanho minimo da tela
 #classe label do tkinter:  (etiquetasou rótulos):
 
 minha_label = tkinter.Label(text="Eu sou um rótulo", font=("Arial", 24, "bold"))
-minha_label.pack()   #faz aparecer o rótulo na janela
+minha_label.grid(column=0, row= 0)   #faz aparecer o rótulo na janela utilizando o modulo grid
+#O METODO PLACE E O METODO GRID. place utilizada coodernadas x e y e grid linhas e colunas como um planilha.
 
-
-#classe button:
-
-
-def button_clic():
-    novo_texto = entrada.get()
-    minha_label.config(text= novo_texto)
+#Button:
+button_2 = tkinter.Button(text="novo botão")
+button_2.grid(column=2, row=0)
 
 button = tkinter.Button(text="Clique aqui", command=button_clic)  #função command é do tkinter.. inicia a função criada acima
-button.pack()      #para embalar no ecrã
+button.grid(column=1, row=1)      #para embalar no ecrã
 
 
 #classe Entry:   (espécie de imput)
-
 entrada = tkinter.Entry(width=10)
-entrada.pack()
 print(entrada.get())
+entrada.grid(column=3, row=2)
 
 
 
