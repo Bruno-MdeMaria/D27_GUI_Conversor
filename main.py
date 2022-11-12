@@ -29,7 +29,7 @@ km_etiqueta = Label(text="Km")
 km_etiqueta.grid(column=2, row=1)
 
 #Button
-botao_calcular = Button(text="Calcular")
+botao_calcular = Button(text="Calcular", command=milhas_p_km)  #command coloca a função no botão.
 botao_calcular.grid(column=1, row=3)
 
 
