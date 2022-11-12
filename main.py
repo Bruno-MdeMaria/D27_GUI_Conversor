@@ -1,5 +1,10 @@
 from tkinter import * #dessa forma importa todos as classes
 
+def milhas_p_km():
+    milhas = float(milhas_imput.get())  # variavel milas recebe o imput. O float converte para um um flutante.
+    km = milhas * 1.609
+    resultado_km.config(text=f"{km}")
+
 janela = Tk() #importa a classe tk
 janela.title("Conversor de milhas para kilometro")
 janela.minsize(width=200, height=100)
